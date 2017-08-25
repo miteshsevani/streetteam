@@ -1,19 +1,23 @@
-$(document).ready(function(){	
+(function(){	
     var destination, trainOperator, departureTime, platform, actualDeparture, delayTime, status;
 
     // Station searched submitted
     document.getElementById('search').addEventListener('click', function() {
         var station = document.getElementById('search-station').value;
-        $('#train-information').empty();
+        document.getElementById('train-information').innerHTML = "";
+
         // Update previous searches
         previousSearches(station);
 
         // get departures of given station
         getDepartures(station);
     })    
-});
+})();
 
 function getDepartures(station) {    
+    let div;
+    let trainInfo = document.getElementById('train-information');
+    
     // Get departure details of searched station via the api
     $.ajax({
         type: "GET",		        
@@ -37,13 +41,19 @@ function getDepartures(station) {
                     status = '<span class="delayed">Delayed<br />' + delayTime + ' mins late</span>';
                 }
                 
-                // build and display html output
-                $('#train-information').append('<div class="container"><div class="information"><div class="destination">'+destination+'</div><div class="operator">'+trainOperator+'</div><div class="platform">Platform: '+platform+'</div></div><div class="timing"><div>'+departureTime+'</div><div>'+status+'</div></div></div>');
+                div = document.createElement('div');
+                div.className = 'container';
+                div.innerHTML = '<div class="information"><div class="destination">'+destination+'</div><div class="operator">'+trainOperator+'</div><div class="platform">Platform: '+platform+'</div></div><div class="timing"><div>'+departureTime+'</div><div>'+status+'</div></div>';
+
+                trainInfo.appendChild(div);
             })
         },
         // if error occures
         error: function(err) {
-            $('#train-information').append('<div class="container">' + err.responseJSON.message + ' Please check your searched station origin.</div>');
+            div = document.createElement('div');
+            div.className = 'container';
+            div.innerHTML = err.responseJSON.message + ' Please check your searched station origin.</div>';
+            trainInfo.appendChild(div);
         }
     });
 }

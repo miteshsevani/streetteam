@@ -154,7 +154,7 @@ h3 {
 }
 
 input[type="text"] {
-  width: 50%;
+  width: auto;
 }
 
 #previous-searches {
