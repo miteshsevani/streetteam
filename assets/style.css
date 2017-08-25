@@ -77,12 +77,12 @@ a:hover {
   min-width: 4.2em;
   padding: 0.55em;
   border: 0;
-  margin: 0.55em 0;
   background: #DF9496;
   color: #F4F3EE;
   font-size: 1.125em;
   text-align: center;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .btn:hover, input[type="submit"]:hover {
@@ -98,8 +98,8 @@ textarea, input[type="text"] {
   font-size: 1em;
 	-webkit-border-radius: 0px;
 	-webkit-appearance: none;
-  border: 0;
-  border-bottom: 2px solid #727B84;
+  border-radius: 10px;
+  border: 1px solid #727B84;
   padding: 0.625em 0.9375em;
   margin: 0 0 0.9375em;
   background: #F2F2F2;
@@ -157,6 +157,15 @@ input[type="text"] {
   width: 50%;
 }
 
+#previous-searches {
+  font-style: italic;
+}
+
+#searched-station {
+  color: purple;
+  margin-top: 20px;
+}
+
 .schedule-headers .container {
   padding:0px 1em;
   font-size: 16px;
@@ -178,7 +187,6 @@ input[type="text"] {
 }
 
 .destination {
-  
   font-weight: bold;
 }
 
@@ -202,8 +210,6 @@ input[type="text"] {
   h3 {
     font-size: 2em;
   }
-
-  
 
   .container {
     padding: 2.5em;
