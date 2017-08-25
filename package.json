@@ -1,0 +1,27 @@
+{
+  "name": "streetteam-frontend-task",
+  "version": "1.0.0",
+  "description": "This task aims to test a developers competency with the core front-end technologies: HTML, CSS and JavaScript.",
+  "main": "index.js",
+  "author": "Daniel Pavitt / StreetTeam",
+  "license": "ISC",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon ./server.js -e js,css,html localhost 5000",
+    "unit": "mocha **/*spec.js -R spec",
+    "functional": "testcafe safari tests/",
+    "test": "npm-run-all -p -r start functional"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mustache-express": "^1.2.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^3.1.1",
+    "testcafe": "^0.9.0"
+  }
+}

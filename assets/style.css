@@ -1,0 +1,150 @@
+
+/* Start: RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+header {
+  padding: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End: RESET */
+
+/* Start: THEME */
+
+body {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.3em;
+  color: #727B84;
+}
+
+h1, h2, h3 {
+  margin: 0 0 0.625em 0;
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 2px 2px #F4F3EE;
+}
+
+ul, ol {
+  margin: 0.625em 1.25em 1.25em;
+}
+
+p, li {
+  margin: 0 0 0.425em;
+}
+
+a {
+  color: #DF9496;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #CC7B7D;
+  text-decoration: underline;
+}
+
+.btn, input[type="submit"] {
+  display: inline-block;
+  min-width: 4.2em;
+  padding: 0.55em;
+  border: 0;
+  margin: 0.55em 0;
+  background: #DF9496;
+  color: #F4F3EE;
+  font-size: 1.125em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn:hover, input[type="submit"]:hover {
+  background: #CC7B7D;
+  text-decoration: none;
+}
+
+label {
+  padding: 0 0.625em 0 0;
+}
+
+textarea, input[type="text"] {
+  font-size: 1em;
+	-webkit-border-radius: 0px;
+	-webkit-appearance: none;
+  border: 0;
+  border-bottom: 2px solid #727B84;
+  padding: 0.625em 0.9375em;
+  margin: 0 0 0.9375em;
+  background: #F2F2F2;
+}
+
+table {
+  max-width: 100%;
+  padding: 2.5em;
+  margin: 2.5em 0;
+  border-top: 5px solid #727B84;
+  background: #F9F9F9;
+  color: #000000;
+}
+
+tr {
+  border-left: 2px solid #727B84;
+  border-bottom: 2px solid #727B84;
+}
+
+th {
+  font-size: 1.125em;
+  font-weight: bold;
+  text-align: left;
+}
+
+td, th {
+  max-width: 100%;
+  padding: 1.25em;
+  border-right: 2px solid #727B84;
+}
+
+.container {
+  max-width: 62.5em;
+  padding: 2.5em;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+.container:nth-child(even) {
+  background: #EAEAEA;
+}
+
+/* End: THEME */
+
+.delayed {
+  color: red;
+}
