@@ -4,6 +4,7 @@
     {{#head}}
     <title>{{title}}</title>
     {{/head}}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/assets/style.css">
   </head>
@@ -15,18 +16,28 @@
         <p id="previous-searches"></p>
         <h3 id="searched-station"></h3>
     </header>
-    <section>
-        
-      <table id="train-information">
-        <tr class="container">
-          <th>Destination</th>
-          <th>Operator</th>
-          <th>Departure Time</th>
-          <th>Platform</th>
-          <th>Status</th>          
-        </tr>
-        
-      </table>
+    <section class="schedule">
+      <div class="schedule-headers">
+          <div class="container">
+            <div class="information">Train information</div>
+            <div class="timing">Status</div>            
+        </div>
+      </div>
+      <div id="train-information">      
+        <div class="container">
+          <div class="information">
+            <div class="destination">London Bridge</div>
+            <div class="operator">South Eastern</div>
+            <div class="platform">Platform: 6</div>
+          </div>
+          <div class="timing">
+            <div>13:45</div>
+            <div>On time</div>
+          </div>
+        </div>
+
+      </div>
+
     </section>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="/assets/script.js"></script>    

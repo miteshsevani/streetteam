@@ -3,7 +3,7 @@ $(document).ready(function(){
 
     document.getElementById('search').addEventListener('click', function() {
         var station = document.getElementById('search-station').value;
-        $('#train-information').empty();
+        
         previousSearches(station);
         getDepartures(station);
     })    
@@ -22,14 +22,12 @@ function getDepartures(station) {
                 platform = this.platform;
                 actualDeparture = this.etd;
                 if(actualDeparture === 'On time') {
-                    status = actualDeparture;
+                    status = '<span class="on-time">' + actualDeparture + '</span>';
                 } else {
                     delayTime = moment.utc(moment(actualDeparture,"HH:mm").diff(moment(departureTime,"HH:mm"))).format("m");
-                    status = '<span class="delayed">Delayed</span><br />' + delayTime + ' mins late';
-                    
+                    status = '<span class="delayed">Delayed<br />' + delayTime + ' mins late</span>';
                 }
-                
-                $('#train-information').append('<tr class="container"><td>'+destination+'</td><td>'+trainOperator+'</td><td>'+departureTime+'</td><td>'+platform+'</td><td>'+status+'</td></tr>');
+                $('#train-information').append('<div class="container"><div class="information"><div class="destination">'+destination+'</div><div class="operator">'+trainOperator+'</div><div class="platform">Platform: '+platform+'</div></div><div class="timing"><div>'+departureTime+'</div><div>'+status+'</div></div></div>');
             })
         }
     });
@@ -44,7 +42,6 @@ function previousSearches(station){
         localStorage.setItem('stations', previousSearches + ', ' + station);    
     }
 
-    
-    document.getElementById('previous-searches').innerHTML = 'Previously searched: ' + localStorage.getItem('stations');
-    document.getElementById('searched-station').innerHTML = station;    
+    document.getElementById('previous-searches').innerHTML = 'Previous destinations: ' + localStorage.getItem('stations');
+    document.getElementById('searched-station').innerHTML = 'Trains from: ' + station;
 }

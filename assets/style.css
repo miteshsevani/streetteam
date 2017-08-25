@@ -145,6 +145,78 @@ td, th {
 
 /* End: THEME */
 
+h3 {
+  font-size: 1.2em;
+}
+
+.container {
+  padding:1em;
+}
+
+input[type="text"] {
+  width: 50%;
+}
+
+.schedule-headers .container {
+  padding:0px 1em;
+  font-size: 16px;
+  background: #333;
+  color: #ddd;
+}
+
+#train-information {
+  width:100%;
+}
+
+.information, .timing {
+  float: left;
+  padding: 1%;  
+}
+
+.information {
+  width: 60%;
+}
+
+.destination {
+  
+  font-weight: bold;
+}
+
+.timing {
+  width: 30%;
+  text-align: center;
+}
+
+.on-time {
+  color: #5cb85c;
+}
+
 .delayed {
   color: red;
+  font-style: italic;
 }
+
+
+/* Tableet and above */
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 2em;
+  }
+
+  
+
+  .container {
+    padding: 2.5em;
+  }
+
+  .schedule-headers .container {
+    padding:0 2em;
+    font-size: 22px;
+  }
+
+  .destination {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
